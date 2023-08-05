@@ -21,8 +21,9 @@ public class UserBookListResponseDto {
     private Date startedAt;
     private Date completedAt;
     private UserBookStatus status;
+    private int page;
     @Builder
-    public UserBookListResponseDto(Long userBookPk, String title, String coverImage, int nowPage, Date createdAt, Date startedAt, Date completedAt, UserBookStatus status) {
+    public UserBookListResponseDto(Long userBookPk, String title, String coverImage, int nowPage, Date createdAt, Date startedAt, Date completedAt, UserBookStatus status, int page) {
         this.userBookPk = userBookPk;
         this.title = title;
         this.coverImage = coverImage;
@@ -31,5 +32,6 @@ public class UserBookListResponseDto {
         this.startedAt = startedAt;
         this.completedAt = completedAt;
         this.status = status;
+        this.page = page;
     }
 }
